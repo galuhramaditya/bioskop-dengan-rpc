@@ -41,7 +41,7 @@ with SimpleXMLRPCServer((server_ip, server_port), allow_none=True) as server:
                 {
                     "idx_film": 0,
                     "harga": 50000,
-                    "waktu": datetime.strptime("5/6/2021 18:00", "%d/%m/%Y %H:%M"),
+                    "waktu": datetime.strptime("1/7/2021 18:00", "%d/%m/%Y %H:%M"),
                     "idx_theater": 0,
                     "daftar_kursi": np.full(self.theater[0]["total_kursi"], -1, dtype="int").tolist()
                 }
@@ -51,12 +51,7 @@ with SimpleXMLRPCServer((server_ip, server_port), allow_none=True) as server:
                 {
                     "username": "abc",
                     "password": "abc",
-                    "pesanan": [
-                        {
-                            "idx_jadwal": 0,
-                            "nomor_kursi": [(0, 4), (0, 6)]
-                        }
-                    ],
+                    "pesanan": [],
                 }
             ]
 
