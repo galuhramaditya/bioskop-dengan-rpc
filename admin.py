@@ -102,17 +102,20 @@ class BioskopAdmin:
                     print("\n*30")
                     self.get_detail_jadwal(idx_jadwal)
                     print("="*20)
-                    print("1. edit waktu")
-                    print("2. edit harga")
-                    print("3. kembali")
+                    print("1. refresh")
+                    print("2. edit waktu")
+                    print("3. edit harga")
+                    print("4. kembali")
                     pil = input("pilihan : ")
                     if pil == "1":
+                        continue
+                    elif pil == "2":
                         waktu = input("waktu (DD/MM/YYYY HH:mm)\t: ")
                         self.server.update_waktu_jadwal(idx_jadwal, waktu)
-                    elif pil == "2":
+                    elif pil == "3":
                         harga = input("harga\t: ")
                         self.server.update_harga_jadwal(idx_jadwal, harga)
-                    elif pil == "3":
+                    elif pil == "4":
                         break
             elif pil == "3":
                 self.tambah_jadwal()
