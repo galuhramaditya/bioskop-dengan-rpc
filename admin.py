@@ -108,10 +108,10 @@ class BioskopAdmin:
                     pil = input("pilihan : ")
                     if pil == "1":
                         waktu = input("waktu (DD/MM/YYYY HH:mm)\t: ")
-                        self.server.update_waktu_jadwal(waktu)
+                        self.server.update_waktu_jadwal(idx_jadwal, waktu)
                     elif pil == "2":
                         harga = input("harga\t: ")
-                        self.server.update_harga_jadwal(harga)
+                        self.server.update_harga_jadwal(idx_jadwal, harga)
                     elif pil == "3":
                         break
             elif pil == "3":
